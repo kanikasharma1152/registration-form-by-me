@@ -1,0 +1,619 @@
+@import url(file:///C:/Users/Hp/Downloads/checkbox-blank-circle-line.svg);
+:root {
+    --primary-color: #065200;
+    --white-color: #ffffff;
+    --border-color: #dceBe5;
+    --light-color: #f5f6fa;
+    --gray-color: #7f8fa6;
+    --dark-color: #353b48;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Impact', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+a {
+    text-decoration: skyblue;
+    color: inherit;
+    -webkit-tap-highlight-color: snow;
+}
+
+img {
+    max-width: 100;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.7em;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo a {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 0;
+    display: block;
+    width: fit-content;
+}
+
+.top {
+    margin-bottom: 50px;
+    background-color: var(--light-color);
+}
+
+.top ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.top ul li {
+    display: flex;
+    align-items: center;
+    color: #27f707;
+    line-height: 1;
+    gap: 7px;
+}
+
+.top ul li.active {
+    color: var(--dark-color);
+}
+
+.top ul li.active~li {
+    color: var(--gray-color);
+}
+
+.top ul li i {
+    font-size: 18px;
+}
+
+.top ul li.active i {
+    color: var(--primary-color);
+}
+
+form .form-child {
+    display: none;
+}
+
+form .form-child.active {
+    display: block;
+}
+
+form h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+form .field .wrapper {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+form .faculty {
+    position: relative;
+    padding-left: 60px;
+    font-size: 13px;
+}
+
+form .faculty h3 {
+    margin: 50px 0;
+}
+
+form .faculty .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--light-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+form .faculty .icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(15px);
+}
+
+form .faculty:nth-child(1) .icon::before {
+    background-color: #13d3cd;
+}
+
+form .faculty:nth-child(2) .icon::before {
+    background-color: #ef0f78;
+}
+
+form .faculty:nth-child(3) .icon::before {
+    background-color: #3506ef;
+}
+
+form .faculty:nth-child(4) .icon::before {
+    background-color: #f906b8;
+}
+
+form .faculty:nth-child(5) .icon::before {
+    background-color: #d3e815;
+}
+
+form .faculty ul {
+    line-height: 2;
+}
+
+form .faculty ul li {
+    position: relative;
+}
+
+form .field .wrapper input {
+    width: 0;
+    min-width: 0;
+    height: 0
+    /*disappear all input as glogbal*/
+}
+
+form .field .wrapper label {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+form .field .wrapper label::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: calc((26px /2) - 8px);
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--light-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 50%;
+}
+
+form .field .wrapper input:checked~label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: rgba(148, 211, 223, 0.959) 0 3px 6px;
+}
+
+
+/* nav */
+
+form nav {
+    text-align: right;
+    padding: 30px 0;
+}
+
+form nav a {
+    font-size: 12px;
+    display: inline-flex;
+    padding: 4px 20px;
+    margin-left: 10px;
+    border: 1px solid rgb(39, 31, 31);
+}
+
+form nav :where(.next, .submit) {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+form nav .prev {
+    border-color: var(--white-color);
+}
+
+form .split {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+
+/* Highlighted*/
+
+.highlight .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.highlight .thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 20px;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.highlight .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.highlight .head span {
+    color: var(--black-color);
+}
+
+.highlight .head h4 {
+    font-size: 18px;
+}
+
+.highlight .head .devider {
+    height: 40px;
+    width: 1px;
+    background-color: var(--border-color);
+    transform: rotate(25deg);
+}
+
+.highlight .wrapper {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid var(--light-color);
+}
+
+.highlight .wrapper h4 {
+    color: var(rgba(0, 0, 0, 0.299));
+    margin-bottom: 50px;
+}
+
+.highlight .field-selected {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.highlight .faculty .icon {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+}
+
+.highlight .faculty h3 {
+    margin: 0;
+}
+
+.form-child.active~.wrapper>.highlight {
+    display: none;
+}
+
+.form-child.active~.wrapper>.highlight {
+    display: none;
+}
+
+.field.active~nav :where(.prev, .submit),
+.field~.wrapper .profile.active~nav .submit {
+    display: none;
+}
+
+
+/* form */
+
+form :where(.profile .story) .heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+form :where(.profile .story) .heading .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+    border-radius: 50%;
+}
+
+form .profile .row:not(:last-child) {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+form .personal .upload p input {
+    height: auto;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+form .personal .upload p input::-webkit-file-upload-button {
+    color: var(--light-color);
+    padding: 5px 10px;
+    background-color: var(--gray-color);
+    border-radius: 4px;
+    border: 10;
+    cursor: pointer;
+    transition: background-color, 3s;
+}
+
+form .personal .upload p input:hover::-webkit-file-upload-button {
+    background-color: var(--primary-color);
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: 12px 20px;
+    height: 42px;
+    background-color: so;
+    border: 1px solid var(--border-color);
+    outline: 10;
+    font-size: 13px;
+    min-width: 212px;
+    width: 100%;
+    transition: border .3s;
+}
+
+:where(input, select, textarea):focus {
+    border-color: var(--gray-color);
+}
+
+input~input {
+    margin-top: 20px;
+}
+
+input::placeholder,
+select {
+    font-family: 'Rubik';
+    color: var(--gray-color);
+}
+
+form .row> :where(.split, p) {
+    margin-bottom: 20px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+}
+
+form p label {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+select {
+    appearance: none;
+}
+
+form .custom-select {
+    position: relative;
+    line-height: normal;
+}
+
+form .custom-select i {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+form .birth input {
+    min-width: 80px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.personal {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.personal h3 {
+    text-align: center;
+    color: #333;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.personal label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.personal input[type="text"],
+.personal input[type="email"],
+.personal input[type="password"],
+.personal input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.personal input:focus {
+    border-color: rgb(59, 231, 247);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+.personal input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.personal button {
+    width: 100%;
+    padding: 12px;
+    background-color: #33e6e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.personal button:hover {
+    background-color: #5aeaf7;
+}
+
+.academic {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.academic h3 {
+    text-align: center;
+    color: #333;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.academic label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.academic input[type="text"],
+.academic input[type="email"],
+.academic input[type="password"],
+.academic input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.academic input:focus {
+    border-color: rgb(59, 231, 247);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+.academic input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.academic button {
+    width: 100%;
+    padding: 12px;
+    background-color: #33e6e0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.academic button:hover {
+    background-color: #5aeaf7;
+}
+
+
+/* for firefox */
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .highlight {
+        padding-top: 30px;
+        margin-top: 100px;
+        border-top: 1px solid var(--border-color);
+    }
+    form>.wrapper {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    form .personal>*:not(.heading) {
+        padding-left: 50px;
+    }
+}
